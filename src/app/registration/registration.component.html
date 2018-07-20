@@ -1,0 +1,37 @@
+<h1>Register Here</h1>
+
+<h3>Create a new account below</h3>
+
+<form [formGroup]="_registerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <div>
+    <mat-form-field>
+      <input matInput placeholder="first name" formControlName="first_name" type="text" required />
+    </mat-form-field>
+    </div>
+    <div>
+    <mat-form-field>
+      <input matInput placeholder="last name" formControlName="last_name" type="text" required />
+    </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="email" formControlName="email" type="email" required />
+      </mat-form-field>
+      </div>
+      <div>
+      <mat-form-field>
+        <input matInput placeholder="password" formControlName="password" type="password" required />
+      </mat-form-field>
+      </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Submit</button>
+</form>
+<br />
+<div class="check">
+<mat-checkbox color="primary">Check me</mat-checkbox>
+<br />
+<mat-checkbox color="warn">No me</mat-checkbox>
+<br />
+<mat-checkbox>Please</mat-checkbox>
+</div>

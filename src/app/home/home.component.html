@@ -1,0 +1,22 @@
+<h1>Welcome to Mason's Playground</h1>
+
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <button>Search</button>
+  </form>
+  <div *ngFor="let students of student; let i=index">
+  <span>
+  <p>First Name: {{student[i].first_name}} || Last Name: {{student[i].last_name}}</p>
+  </span>
+
+  </div>
+  <br />
+  <form class="form" (ngSubmit)="createStudent()">
+    <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name">
+    <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name">
+    <input type="text" [(ngModel)]="email" name="email" placeholder="Email">
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Password">
+    <input type="text" [(ngModel)]="resume" name="resume" placeholder="Resume URL">
+    <button>Submit</button>
+  </form>
+</div>

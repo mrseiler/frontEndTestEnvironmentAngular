@@ -1,0 +1,20 @@
+<h1>Login Here</h1>
+
+<h3>Create a new account below</h3>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="loginForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="email" formControlName="email" type="email" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="password" formControlName="password" type="password" required />
+      </mat-form-field>
+    </div>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Submit</button>
+</form>
+<a routerLink="/register">Don't have an account?</a>
